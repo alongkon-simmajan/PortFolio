@@ -1,5 +1,8 @@
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('reveal', {
+    getSSRProps() {
+      return {}
+    },
     beforeMount(el, binding) {
       el.style.opacity = '0'
       el.style.transform = 'translateY(28px)'
