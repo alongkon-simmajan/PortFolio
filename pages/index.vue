@@ -4,6 +4,7 @@
     <HeroSection />
     <AboutSection />
     <SkillsSection />
+    <ExperienceSection />
     <ProjectsSection />
     <ContactSection />
     <AppFooter />

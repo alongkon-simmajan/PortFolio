@@ -3,22 +3,22 @@ const categories = [
   {
     icon: 'fas fa-laptop-code',
     title: 'Frontend',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML5 / CSS3', 'JavaScript'],
+    skills: ['Vue.js', 'Nuxt.js', 'React', 'HTML5', 'CSS3', 'Tailwind CSS'],
   },
   {
     icon: 'fas fa-server',
     title: 'Backend',
-    skills: ['Node.js', 'Express', 'Python', 'FastAPI', 'REST API', 'GraphQL'],
+    skills: ['Node.js', 'Express', 'ElysiaJS', 'NestJS', 'TypeScript'],
   },
   {
     icon: 'fas fa-database',
-    title: 'Database',
-    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Prisma ORM'],
+    title: 'Database & ORM',
+    skills: ['Prisma', 'PostgreSQL', 'MySQL','MSSQL'],
   },
   {
-    icon: 'fas fa-cloud',
-    title: 'DevOps & Tools',
-    skills: ['Docker', 'Git / GitHub', 'CI/CD', 'Vercel', 'AWS', 'Linux'],
+    icon: 'fas fa-tools',
+    title: 'Tools',
+    skills: ['Git', 'GitLab', 'GitHub', 'Postman', 'DBeaver', 'RESTful API'],
   },
 ]
 </script>
@@ -27,8 +27,8 @@ const categories = [
   <section id="skills" class="py-28 bg-bg-primary">
     <div class="max-w-5xl mx-auto px-8">
       <div v-reveal class="text-center mb-16">
-        <span class="section-label">What I Work With</span>
-        <h2 class="section-title">Tech Stack</h2>
+        <span class="section-label">เทคโนโลยีที่ใช้งาน</span>
+        <h2 class="section-title">ทักษะความเชี่ยวชาญ</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-5">
         <div

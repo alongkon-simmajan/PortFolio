@@ -1,26 +1,23 @@
 <script setup lang="ts">
 const projects = [
   {
-    icon: 'fas fa-shopping-cart',
+    icon: 'fas fa-boxes',
     color: '#64ffda',
-    title: 'E-Commerce Platform',
-    desc: 'Full-featured online store with real-time inventory, Stripe payment integration, and an admin dashboard.',
-    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe'],
+    title: 'Enterprise Asset Management System',
+    desc: 'ระบบบริหารจัดการสินทรัพย์ระดับประเทศ พร้อม RBAC และสิทธิ์เฉพาะสาขา รองรับ lifecycle ของสินทรัพย์ ทั้งการโอน, ตัดจำหน่าย และ reporting dashboard แบบ real-time',
+    tech: ['Vue.js', 'ElysiaJS', 'TypeScript', 'Prisma ORM', 'PostgreSQL'],
+    github: '#',
+    demo: '#',
   },
   {
-    icon: 'fas fa-tasks',
+    icon: 'fas fa-dumbbell',
     color: '#7c3aed',
-    title: 'Project Management App',
-    desc: 'Collaborative tool with real-time updates, Kanban boards, file sharing, and integrated team chat.',
-    tech: ['React', 'Express', 'Socket.io', 'MongoDB'],
-  },
-  {
-    icon: 'fas fa-chart-line',
-    color: '#f59e0b',
-    title: 'Analytics Dashboard',
-    desc: 'Real-time data visualization platform with customizable charts and automated reporting.',
-    tech: ['TypeScript', 'FastAPI', 'Redis', 'Docker'],
-  },
+    title: 'Automated Fitness Booking Platform',
+    desc: 'ระบบ booking อัตโนมัติประสิทธิภาพสูง พร้อม auto check-in ผ่าน scheduled API tasks และ admin dashboard สำหรับติดตามพนักงานและจัดการ gym capacity',
+    tech: ['React', 'Node.js', 'Express', 'MySQL', 'Docker'],
+    github: '#',
+    demo: '#',
+  }
 ]
 </script>
 
@@ -28,10 +25,13 @@ const projects = [
   <section id="projects" class="py-28 bg-bg-secondary">
     <div class="max-w-5xl mx-auto px-8">
       <div v-reveal class="text-center mb-16">
-        <span class="section-label">What I've Built</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <span class="section-label">ผลงานที่ผ่านมา</span>
+        <h2 class="section-title">โปรเจกต์แนะนำ</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-5">
+      <div
+        class="grid gap-5 mx-auto justify-center"
+        :class="projects.length === 1 ? 'max-w-sm' : projects.length === 2 ? 'md:grid-cols-2 max-w-2xl' : 'md:grid-cols-3'"
+      >
         <div
           v-for="(p, i) in projects" :key="p.title"
           v-reveal="i * 80"
@@ -43,11 +43,11 @@ const projects = [
             <i :class="p.icon" class="text-5xl opacity-30 group-hover:opacity-60 group-hover:scale-110 transition-all duration-300"
               :style="`color:${p.color}`" />
             <div class="absolute top-3 right-3 flex gap-2 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
-              <a href="#" aria-label="GitHub"
+              <a :href="p.github" aria-label="GitHub" target="_blank" rel="noopener noreferrer"
                 class="w-8 h-8 bg-bg-primary/90 border border-white/10 rounded-md flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent text-sm transition-colors">
                 <i class="fab fa-github" />
               </a>
-              <a href="#" aria-label="Live demo"
+              <a :href="p.demo" aria-label="Live demo" target="_blank" rel="noopener noreferrer"
                 class="w-8 h-8 bg-bg-primary/90 border border-white/10 rounded-md flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent text-sm transition-colors">
                 <i class="fas fa-external-link-alt" />
               </a>

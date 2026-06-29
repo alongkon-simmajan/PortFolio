@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const stats = [
-  { num: '3+',  label: 'Years' },
-  { num: '20+', label: 'Projects' },
-  { num: '10+', label: 'Clients' },
+  { num: 'Fullstack Developer', label: 'ตำแหน่ง' },
+  { num: '2+',   label: 'ประสบการณ์ (ปี)' },
+  { num: 'RMUTI', label: 'มหาวิทยาลัย' },
 ]
-const tags = ['Problem Solver', 'Open Source', 'Team Player', 'Continuous Learner']
+const tags = ['นักแก้ปัญหา', 'เรียนรู้เร็ว', 'Agile / Scrum', 'Full Stack']
 </script>
 
 <template>
@@ -12,16 +12,16 @@ const tags = ['Problem Solver', 'Open Source', 'Team Player', 'Continuous Learne
     <div class="max-w-5xl mx-auto px-8">
       <!-- Header -->
       <div v-reveal class="text-center mb-16">
-        <span class="section-label">Who I Am</span>
-        <h2 class="section-title">About Me</h2>
+        <span class="section-label">ข้อมูลส่วนตัว</span>
+        <h2 class="section-title">เกี่ยวกับฉัน</h2>
       </div>
 
       <div class="grid md:grid-cols-[auto_1fr] gap-16 items-start">
         <!-- Image + stats -->
         <div v-reveal="80" class="flex flex-col items-center">
           <div class="relative group inline-block">
-            <div class="w-60 h-60 rounded-xl bg-bg-card border border-white/10 flex items-center justify-center text-6xl text-slate-600">
-              <i class="fas fa-user" />
+            <div class="w-60 h-60 rounded-xl overflow-hidden border border-white/10">
+              <img src="/files/pictureProfiles/pf.jpg" alt="Alongkorn Simmachan" class="w-full h-full object-cover object-top" />
             </div>
             <div class="absolute top-3.5 left-3.5 w-60 h-60 rounded-xl border-2 border-accent -z-10 transition-all duration-300 group-hover:top-2 group-hover:left-2" />
           </div>
@@ -36,14 +36,18 @@ const tags = ['Problem Solver', 'Open Source', 'Team Player', 'Continuous Learne
         <!-- Text -->
         <div v-reveal="160" class="space-y-5">
           <p class="text-slate-400 leading-relaxed">
-            I'm a passionate <strong class="text-accent font-semibold">Full Stack Developer</strong> with a love
-            for building products that make a difference. I work across the entire stack — from crafting
-            pixel-perfect UIs to designing scalable backend architectures.
+            ผมเป็น <strong class="text-accent font-semibold">Software Engineer</strong> ที่มีความหลงใหลในการพัฒนาเว็บแอปพลิเคชัน
+            ทั้งฝั่ง Frontend และ Backend มีประสบการณ์สร้าง Responsive UI และ Backend API ที่มีประสิทธิภาพ
           </p>
           <p class="text-slate-400 leading-relaxed">
-            When I'm not coding, you'll find me exploring new technologies, contributing to open source, or
-            writing about software engineering. I believe great software is built at the intersection of clean
-            code and great UX.
+            จบการศึกษาระดับปริญญาตรี <strong class="text-slate-200">คณะบริหารธุรกิจและเทคโนโลยีสารสนเทศ สาขาเทคโนโลยีธุรกิจดิจิทัล</strong>
+            จาก <strong class="text-slate-200">มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</strong> ปี 2024 
+          </p>
+          <p class="text-slate-400 leading-relaxed">
+            ปัจจุบันทำงานในตำแหน่ง <strong class="text-accent">Programmer</strong> ที่
+            <strong class="text-slate-200">JMT Network Services PCL.</strong> ตั้งแต่มิถุนายน 2024
+            รับผิดชอบพัฒนาเว็บแอปพลิเคชันด้วย Vue.js / Nuxt.js ออกแบบ RESTful APIs ด้วย Node.js / ElysiaJS /Express
+            และจัดการฐานข้อมูลผ่าน Prisma ORM ภายใต้กระบวนการทำงานแบบ Agile / Scrum
           </p>
           <div class="flex flex-wrap gap-2 pt-1">
             <span v-for="tag in tags" :key="tag"
@@ -52,9 +56,11 @@ const tags = ['Problem Solver', 'Open Source', 'Team Player', 'Continuous Learne
             </span>
           </div>
           <div class="pt-3">
-            <a href="#"
+            <a href="/files/CV_Alongkorn_Simmachan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center gap-2 text-slate-400 border border-white/10 px-5 py-2.5 rounded-lg hover:border-accent hover:text-accent transition-all duration-200">
-              Download Resume <i class="fas fa-download text-sm" />
+              ดูเรซูเม่ <i class="fas fa-external-link-alt text-sm" />
             </a>
           </div>
         </div>

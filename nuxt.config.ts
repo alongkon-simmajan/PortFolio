@@ -7,9 +7,9 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      title: 'Alex Dev | Full Stack Developer',
+      title: 'Alongkorn Simmachan | Full Stack Developer',
       meta: [
-        { name: 'description', content: 'Full Stack Developer Portfolio — building fast, scalable web applications.' }
+        { name: 'description', content: 'Full Stack Developer Portfolio — Alongkorn Simmachan, specializing in Vue.js, Nuxt.js, Node.js and ElysiaJS.' }
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

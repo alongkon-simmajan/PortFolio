@@ -3,10 +3,11 @@ const scrolled = ref(false)
 const menuOpen = ref(false)
 
 const links = [
-  { href: '#about',    label: 'About' },
-  { href: '#skills',   label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact',  label: 'Contact' },
+  { href: '#about',      label: 'เกี่ยวกับ' },
+  { href: '#skills',     label: 'ทักษะ' },
+  { href: '#experience', label: 'ประสบการณ์' },
+  { href: '#projects',   label: 'ผลงาน' },
+  { href: '#contact',    label: 'ติดต่อ' },
 ]
 
 onMounted(() => {
@@ -22,9 +23,8 @@ onMounted(() => {
     scrolled ? 'bg-bg-primary/90 backdrop-blur-md border-b border-white/[0.06] py-3' : 'py-5',
   ]">
     <div class="max-w-5xl mx-auto px-8 flex items-center justify-between">
-      <!-- Logo -->
       <a href="#" class="font-mono text-accent text-lg font-medium">
-        <span class="opacity-40">&lt;</span>AlexDev<span class="opacity-40">/&gt;</span>
+        <span class="opacity-40">&lt;</span>Alongkorn<span class="opacity-40">/&gt;</span>
       </a>
 
       <!-- Desktop links -->
@@ -34,8 +34,8 @@ onMounted(() => {
           {{ l.label }}
           <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-200" />
         </a>
-        <a href="#" class="font-mono text-sm text-accent border border-accent/50 px-4 py-1.5 rounded-md hover:bg-accent/10 transition-colors">
-          Resume
+        <a href="/files/CV_Alongkorn_Simmachan.pdf" target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-accent border border-accent/50 px-4 py-1.5 rounded-md hover:bg-accent/10 transition-colors">
+          เรซูเม่
         </a>
       </div>
 
@@ -56,8 +56,11 @@ onMounted(() => {
           @click="menuOpen = false">
           {{ l.label }}
         </a>
-        <a href="#" class="text-accent text-center border border-accent/50 px-4 py-2 rounded-md hover:bg-accent/10 transition-colors">
-          Resume
+        <a href="/files/CV_Alongkorn_Simmachan.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent text-center border border-accent/50 px-4 py-2 rounded-md hover:bg-accent/10 transition-colors">
+          เรซูเม่
         </a>
       </div>
     </Transition>
